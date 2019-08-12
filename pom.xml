@@ -17,19 +17,19 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>RELEASE</version>
+            <version>4.7.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
-            <version>RELEASE</version>
+            <version>4.7.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>RELEASE</version>
+            <version>4.7.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
