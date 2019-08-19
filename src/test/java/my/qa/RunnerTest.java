@@ -2,7 +2,9 @@ package my.qa;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.After;
 import org.junit.runner.RunWith;
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -13,7 +15,7 @@ import org.junit.runner.RunWith;
         },
         monochrome = true,
         features = {"src/test/resources/feature/"},
-        glue = {"my.qa.step"}
+        glue = {"my.qa"}
 )
 
 public class RunnerTest {

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,6 +15,7 @@ import java.util.Date;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@Component
 public class PensionReportPage {
 
     private final String url            = "https://www.gosuslugi.ru/10042/1/form";
@@ -20,10 +23,11 @@ public class PensionReportPage {
     private final By locatorPageTitle   = By.cssSelector("div.title h1");
     private final By locatorDate        = By.cssSelector("span b:nth-of-type(2)");
 
+    @Autowired
     private WebDriver driver;
 
     public PensionReportPage() {
-        this.driver = Driver.getDriver();
+//        this.driver = Driver.getDriver();
     }
 
 

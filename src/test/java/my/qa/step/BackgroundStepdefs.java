@@ -1,26 +1,29 @@
 package my.qa.step;
 
 
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
+import my.qa.config.Config;
 import my.qa.page.LoginPage;
 import my.qa.page.MainPage;
-import my.qa.service.Driver;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+
 
 public class BackgroundStepdefs {
 
     private String login;
     private String password;
 
+    @Autowired
     private LoginPage loginPage;
+    @Autowired
     private MainPage mainPage;
 
     public BackgroundStepdefs() {
-        this.loginPage = new LoginPage();
-        this.mainPage = new MainPage();
         this.login = System.getProperty("login");
         this.password = System.getProperty("password");
     }
+
 
     @Given("User is logged in")
     public void userIsLoggedIn() {
@@ -29,8 +32,4 @@ public class BackgroundStepdefs {
         mainPage.verify();
     }
 
-    @After
-    public void after(){
-        Driver.clearDriver();
-    }
 }

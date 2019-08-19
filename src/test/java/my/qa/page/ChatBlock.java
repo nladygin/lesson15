@@ -4,12 +4,15 @@ import my.qa.service.Driver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@Component
 public class ChatBlock {
 
     private final By locatorOpenChat        = By.cssSelector("div.pso-header");
@@ -17,10 +20,11 @@ public class ChatBlock {
     private final By locatorMessageInput    = By.cssSelector("#_ocwidget_chat_editorInput");
     private final By locatorMessageSent     = By.cssSelector("div._ocwidget_chat_messItem-text");
 
+    @Autowired
     private WebDriver driver;
 
     public ChatBlock() {
-        this.driver = Driver.getDriver();
+//        this.driver = Driver.getDriver();
     }
 
 

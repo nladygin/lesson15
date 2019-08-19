@@ -6,15 +6,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import my.qa.page.MainPage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 public class MainStepdefs {
 
+    @Autowired
     private MainPage mainPage;
 
-    public MainStepdefs() {
-        this.mainPage = new MainPage();
-    }
+//    public MainStepdefs() {
+//        this.mainPage = new MainPage();
+//    }
 
     @Given("User is on the main page")
     public void userIsOnTheMainPage() {
