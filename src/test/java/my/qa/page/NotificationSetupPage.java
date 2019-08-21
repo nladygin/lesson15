@@ -1,6 +1,5 @@
 package my.qa.page;
 
-import my.qa.service.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +18,6 @@ public class NotificationSetupPage {
     @Autowired
     private WebDriver driver;
 
-    public NotificationSetupPage() {
-//        this.driver = Driver.getDriver();
-    }
 
 
     public void open(){

@@ -24,6 +24,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-jvm</artifactId>
             <version>4.7.1</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>

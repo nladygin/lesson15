@@ -1,6 +1,5 @@
 package my.qa.page;
 
-import my.qa.service.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,9 +21,7 @@ public class SearchResultPage {
     @Autowired
     private WebDriver driver;
 
-    public SearchResultPage() {
-//        this.driver = Driver.getDriver();
-    }
+
 
     public void loaded(){
         new WebDriverWait(driver, 30L).until(ExpectedConditions.numberOfElementsToBe(locatorResultPage, 1));

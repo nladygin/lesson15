@@ -4,14 +4,14 @@ package my.qa.step;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import my.qa.page.InfoPage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class InfoStepdefs {
 
+    @Autowired
     private InfoPage infoPage;
 
-    public InfoStepdefs() {
-        this.infoPage = new InfoPage();
-    }
+
 
     @When("User navigates to personal page")
     public void userNavigatesToPersonalPage() {

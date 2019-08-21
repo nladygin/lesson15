@@ -1,6 +1,5 @@
 package my.qa.page;
 
-import my.qa.service.Driver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,9 +22,6 @@ public class ChatBlock {
     @Autowired
     private WebDriver driver;
 
-    public ChatBlock() {
-//        this.driver = Driver.getDriver();
-    }
 
 
     public void openChat(){

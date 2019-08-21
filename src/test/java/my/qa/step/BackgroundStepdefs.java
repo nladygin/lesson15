@@ -2,11 +2,9 @@ package my.qa.step;
 
 
 import io.cucumber.java.en.Given;
-import my.qa.config.Config;
 import my.qa.page.LoginPage;
 import my.qa.page.MainPage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 
 
 public class BackgroundStepdefs {

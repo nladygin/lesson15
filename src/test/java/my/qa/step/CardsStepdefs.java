@@ -5,14 +5,14 @@ package my.qa.step;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import my.qa.page.CardsPage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class CardsStepdefs {
 
+    @Autowired
     private CardsPage cardsPage;
 
-    public CardsStepdefs() {
-        this.cardsPage = new CardsPage();
-    }
+
 
     @When("User navigates to cards page")
     public void userNavigatesToCardsPage() {

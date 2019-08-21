@@ -4,14 +4,14 @@ package my.qa.step;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import my.qa.page.PensionReportPage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class PensionReportStepdefs {
 
+    @Autowired
     private PensionReportPage pensionReportPage;
 
-    public PensionReportStepdefs() {
-        this.pensionReportPage = new PensionReportPage();
-    }
+
 
     @When("User requests the pension report")
     public void userRequestsThePensionReport() {

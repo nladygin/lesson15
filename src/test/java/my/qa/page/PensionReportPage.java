@@ -1,9 +1,7 @@
 package my.qa.page;
 
-import my.qa.service.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +24,6 @@ public class PensionReportPage {
     @Autowired
     private WebDriver driver;
 
-    public PensionReportPage() {
-//        this.driver = Driver.getDriver();
-    }
 
 
     public void open(){

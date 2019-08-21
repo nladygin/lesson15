@@ -1,6 +1,5 @@
 package my.qa.page;
 
-import my.qa.service.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,9 +20,7 @@ public class ServiceCategoriesPage {
     @Autowired
     private WebDriver driver;
 
-    public ServiceCategoriesPage() {
-//        this.driver = Driver.getDriver();
-    }
+
 
     public void loaded(){
         new WebDriverWait(driver, 10L).until(ExpectedConditions.textToBe(locatorCrumbs, "Категории услуг"));

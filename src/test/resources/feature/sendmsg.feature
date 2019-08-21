@@ -6,9 +6,9 @@ Feature: Send message to support team
 
   Scenario Outline: Send message to support
       Given User is on the main page
-#      When User opens chat
-#      And Sends "<message>"
-#      Then Message "<message>" is added to chat
+      When User opens chat
+      And Sends "<message>"
+      Then Message "<message>" is added to chat
 
     Examples:
     | message                                             |

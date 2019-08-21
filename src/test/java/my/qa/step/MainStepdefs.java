@@ -14,9 +14,7 @@ public class MainStepdefs {
     @Autowired
     private MainPage mainPage;
 
-//    public MainStepdefs() {
-//        this.mainPage = new MainPage();
-//    }
+
 
     @Given("User is on the main page")
     public void userIsOnTheMainPage() {

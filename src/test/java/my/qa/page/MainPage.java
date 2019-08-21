@@ -5,23 +5,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+
 
 @Component
 public class MainPage {
 
     private final String url                = "https://www.gosuslugi.ru";
     private final String linkCategories     = "https://www.gosuslugi.ru/category";
-    private final String linkLogout         = "https://www.gosuslugi.ru/auth-provider/logout";
     private final By locatorUserMenu        = By.cssSelector("#float-user-menu");
     private final By locatorSearchIcon      = By.cssSelector("div.search-ico");
     private final By locatorSearchInput     = By.cssSelector("input.select-text");
@@ -65,10 +62,6 @@ public class MainPage {
 
     public void verify(){
         assertThat(driver.findElements(locatorUserMenu).size(), equalTo(1));
-    }
-
-    public void logout(){
-        driver.get(linkLogout);
     }
 
 

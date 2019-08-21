@@ -4,13 +4,14 @@ package my.qa.step;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import my.qa.page.ServiceCategoriesPage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class ServiceCategoriesStepdefs {
 
+    @Autowired
     private ServiceCategoriesPage serviceCategoriesPage;
-    public ServiceCategoriesStepdefs() {
-        this.serviceCategoriesPage = new ServiceCategoriesPage();
-    }
+
+
 
     @Then("User should be on the categories page")
     public void userShouldBeOnTheCategoriesPage() {

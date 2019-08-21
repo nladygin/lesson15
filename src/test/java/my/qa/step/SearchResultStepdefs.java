@@ -4,14 +4,14 @@ package my.qa.step;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import my.qa.page.SearchResultPage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class SearchResultStepdefs {
 
+    @Autowired
     private SearchResultPage searchResultPage;
 
-    public SearchResultStepdefs() {
-        this.searchResultPage = new SearchResultPage();
-    }
+
 
     @Then("User should be on the search result page")
     public void userShouldBeOnTheSearchResultPage() {
